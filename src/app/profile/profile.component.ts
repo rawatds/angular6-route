@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  private backColor = "green";
+
+  private displayJava:boolean = true;
+
+  private favFood = "Pizza";
+
+  private colors = ['red', 'blue', 'green', 'black'];
+
+  constructor(private elemRef: ElementRef) { }
 
   ngOnInit() {
+  }
+
+  changeBackground() {
+    this.elemRef.nativeElement.ownerDocument.body.style.backgroundColor = this.backColor;
   }
 
 }

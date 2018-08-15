@@ -10,7 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ContactusComponent } from './contactus/contactus.component';
 
 const routes: Route[] = [
-  { path: '', redirectTo: '/personal', pathMatch: 'full' },
+  { path: '', redirectTo: '/personal', pathMatch: 'full' }, // default
   { path: 'personal', component: PersonalComponent },
   { path: 'professional', component: ProfessionalComponent },
   { path: 'skills', component: SkillsComponent },
@@ -18,6 +18,7 @@ const routes: Route[] = [
   //Child routes
   {
     path: 'settings', component: SettingsComponent, children: [
+      { path: '', redirectTo: 'profile', pathMatch: 'full' }, // default at child level
       { path: 'profile', component: ProfileComponent },
       { path: 'contactus', component: ContactusComponent }
     ]

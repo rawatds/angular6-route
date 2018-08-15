@@ -1,9 +1,23 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
 <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
+
+
   <img width="50" alt="Angular Logo" src="../favicon.ico">
+  <br>
+  <ul>
+    <li><a [routerLink]="homeRoute">Home</a></li>               <!-- Case 1 -->
+    <li><a routerLink="personal">Personal</a></li>
+    <li><a routerLink="professional">Professional</a></li>
+    <li><a routerLink="skills">Skills</a> </li>
+    <li><a routerLink="{{settingsRoute}}">Settings</a> </li>  <!-- Case 2 -->
+    <li><a routerLink="settings/contactus">Contact Us</a></li> 
+
+    <li><a *ngFor="let route of routes" routerLink="{{route.linkName}}"> {{ route.url }}</a>   </li>
+  </ul>
+
 </div>
 <br>
 <router-outlet></router-outlet>

@@ -1,3 +1,66 @@
-<p>
-  profile works!
-</p>
+<div  style="background-color: {{backColor }}"> 
+
+    <p><b>Profile Settings:</b></p>
+    <p>
+      Background color: <input type="text" [(ngModel)]="backColor">
+      <button (click)="changeBackground()">Set</button>
+    </p>
+
+
+    <!-- ngIf .. else block -->
+    <p style="color:red">*ngIf with else block</p>
+    <select [(ngModel)]="displayJava">
+      <option selected value=true>Java</option>
+      <option value=false>World</option>
+    </select>
+
+    {{ displayJava }}
+    
+    <div *ngIf="displayJava; then thenBlock; else elseBlock"></div>
+    
+    <ng-template #thenBlock>
+      <h2>Welcome Java</h2>
+    </ng-template>
+
+    <ng-template #elseBlock>
+      <h2>Welcome World</h2>
+    </ng-template>
+    
+
+    <!-- ngSwitch Example -->
+    <p style="color:red">*ngSwitch example:</p>
+    Your favorite food:  <select [(ngModel)]="favFood">
+      <option selected value=''>Select a food...</option>
+      <option selected value='Pizza'>Pizza</option>
+      <option value='Burger'>Burger</option>
+      <option value='Dosa'>Dosa</option>
+      <option value='Chicken'>Chicken</option>
+    </select>
+    {{ favFood }}
+
+    <div [ngSwitch] = "favFood">
+      <div *ngSwitchDefault> Your like <b>Select something</b></div>
+      <div *ngSwitchCase = "'Pizza'"> Your like <b>Pizza</b></div>
+      <div *ngSwitchCase = "'Burger'"> Your like <b>Burger</b></div>
+      <div *ngSwitchCase = "'Dosa'"> Your like <b>Dosa</b></div>
+      <div *ngSwitchCase = "'Chicken'"> Your like <b>Chicken</b></div>
+    </div>
+
+    <!-- ngFor Example -->
+    <p style="color:red">*ngFor example:</p>
+    <p>Index - even - first - last - color</p>
+    <div *ngFor="let c of colors; index as i; even as e; first as f; last as l">
+      
+      <div *ngIf="e; else elseBlock">
+        <p style="color:red; background-color: yellow">{{ i }} - {{e}} - {{ f }} - {{l}} - {{ c }}</p>
+      </div>
+
+      <ng-template #elseBlock>
+          <p style="color:blue; background-color: aqua">{{ i }} - {{e}} - {{ f }} - {{l}} - {{ c }}</p>
+      </ng-template>
+      
+
+    </div>
+
+
+  </div>
