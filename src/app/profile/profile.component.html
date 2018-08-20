@@ -1,11 +1,10 @@
-<div  style="background-color: {{backColor }}"> 
+<div  style="background-color: {{backColor}}"> 
 
     <p><b>Profile Settings:</b></p>
     <p>
       Background color: <input type="text" [(ngModel)]="backColor">
       <button (click)="changeBackground()">Set</button>
     </p>
-
 
     <!-- ngIf .. else block -->
     <p style="color:red">*ngIf with else block</p>
@@ -58,9 +57,5 @@
       <ng-template #elseBlock>
           <p style="color:blue; background-color: aqua">{{ i }} - {{e}} - {{ f }} - {{l}} - {{ c }}</p>
       </ng-template>
-      
-
     </div>
-
-
   </div>

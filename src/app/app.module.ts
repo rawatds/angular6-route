@@ -12,6 +12,9 @@ import { Error404Component } from './error404/error404.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { DepartmentListComponent } from './department-list/department-list.component';
+import { DepartmentDetailComponent } from './department-detail/department-detail.component';
+import { DepartmentService } from './department.service';
 
 
 @NgModule({
@@ -23,14 +26,16 @@ import { ContactusComponent } from './contactus/contactus.component';
     Error404Component,
     SettingsComponent,
     ProfileComponent,
-    ContactusComponent
+    ContactusComponent,
+    DepartmentListComponent,
+    DepartmentDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DepartmentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

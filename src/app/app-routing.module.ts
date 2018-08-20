@@ -8,12 +8,16 @@ import { Error404Component } from './error404/error404.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { DepartmentListComponent } from './department-list/department-list.component';
+import { DepartmentDetailComponent } from './department-detail/department-detail.component';
 
 const routes: Route[] = [
   { path: '', redirectTo: '/personal', pathMatch: 'full' }, // default
   { path: 'personal', component: PersonalComponent },
   { path: 'professional', component: ProfessionalComponent },
   { path: 'skills', component: SkillsComponent },
+  { path: 'departments', component: DepartmentListComponent },
+  { path: 'departments/:id', component: DepartmentDetailComponent },
 
   //Child routes
   {

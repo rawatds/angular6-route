@@ -1,0 +1,19 @@
+div {background-color: green;}
+div a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    display:inline-block;
+}
+ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+li.selected {
+  background-color: yellow;
+}
+
+ul li:hover {background: yellow;}

@@ -14,6 +14,7 @@
     <li><a routerLink="skills">Skills</a> </li>
     <li><a routerLink="{{settingsRoute}}">Settings</a> </li>  <!-- Case 2 -->
     <li><a routerLink="settings/contactus">Contact Us</a></li> 
+    <li><a routerLink="departments">Departments</a></li>
 
     <li><a *ngFor="let route of routes" routerLink="{{route.linkName}}"> {{ route.url }}</a>   </li>
   </ul>

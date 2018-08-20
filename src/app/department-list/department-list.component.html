@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<div>
+    <ul class="w3-ul">
+          <li  (click)="onSelect(department)" 
+          [class.selected]="isSelected(department)"
+          *ngFor="let department of departments"><span class="w3-badge">{{department.id}}</span>
+             {{department.name}}</li>
+        </ul>
+ </div> 

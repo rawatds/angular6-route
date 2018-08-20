@@ -1,3 +1,24 @@
 <div>
   <router-outlet></router-outlet>
 </div>
+
+<p><b>Date pipes:</b></p>
+<div>
+
+  '--': {{ mydate }} <br>
+  'date': {{ mydate | date }}<br>
+
+  short: {{ mydate | date: 'short'}} <br>
+  shortDate: {{ mydate | date: 'shortDate'}}<br>
+  shortTime: {{ mydate | date: 'shortTime'}}<br>
+
+  medium: {{ mydate | date: 'medium'}} <br>
+  mediumDate: {{ mydate | date: 'mediumDate'}}<br>
+  mediumTime: {{ mydate | date: 'mediumTime'}}<br>
+
+  long: {{ mydate | date: 'long'}}<br>
+  longDate: {{ mydate | date: 'longDate'}}<br>
+  'dd-mm-yyyy: {{ mydate | date: 'dd-mm-yyyy'}}<br>
+  'HH:mm:ss':  {{ mydate | date: 'HH:mm:ss'}}<br>
+  
+</div>  

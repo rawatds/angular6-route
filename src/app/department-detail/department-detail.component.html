@@ -1,0 +1,16 @@
+<div style="height: 200px; background-color: aqua;  " *ngIf="department; else deptNotFound">
+  <p>You have selected the department id: <b>{{ department.id }}</b></p>
+  <p>Department Name: <b>{{ department.name }}</b></p>
+  <p>Department HOD: <b>{{ department.hod }}</b></p>
+  <p>Department Capacity: <b>{{ department.capacity }}</b></p>
+</div>
+
+<ng-template #deptNotFound>
+    <div> The department does not exists with department id: <b>{{ deptID }}</b></div>
+</ng-template>
+
+  
+<div>
+  <button (click)="goToDepartments()">Back</button>
+</div>
+

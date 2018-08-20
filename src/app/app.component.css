@@ -23,7 +23,8 @@ li a {
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: yellowgreen;
+    color: red;
 }
 
 .active {
